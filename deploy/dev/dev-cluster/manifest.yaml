@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   annotations:
-    cnrm.cloud.google.com/project-id: johnwhitaker-project-6fdad580
+    cnrm.cloud.google.com/project-id: johnwhitaker-project-00cb323d
   labels:
     geo: uk
     test: replace
@@ -12,7 +12,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   annotations:
-    cnrm.cloud.google.com/project-id: johnwhitaker-project-6fdad580
+    cnrm.cloud.google.com/project-id: johnwhitaker-project-00cb323d
   labels:
     geo: uk
     test: replace
@@ -22,7 +22,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   annotations:
-    cnrm.cloud.google.com/project-id: johnwhitaker-project-6fdad580
+    cnrm.cloud.google.com/project-id: johnwhitaker-project-00cb323d
   labels:
     geo: uk
     test: replace
@@ -242,5 +242,5 @@ kind: ConfigConnector
 metadata:
   name: configconnector.core.cnrm.cloud.google.com
 spec:
-  googleServiceAccount: cnrmsa-dev-cluster@johnwhitaker-project-6fdad580.iam.gserviceaccount.com
+  googleServiceAccount: cnrmsa-dev-cluster@johnwhitaker-project-00cb323d.iam.gserviceaccount.com
   mode: cluster
