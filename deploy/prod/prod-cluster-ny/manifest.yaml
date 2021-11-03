@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   annotations:
-    cnrm.cloud.google.com/project-id: PROJECT-INSERT
+    cnrm.cloud.google.com/project-id: johnwhitaker-project-6fdad580
   labels:
     geo: uk
     test: replace
@@ -12,7 +12,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   annotations:
-    cnrm.cloud.google.com/project-id: PROJECT-INSERT
+    cnrm.cloud.google.com/project-id: johnwhitaker-project-6fdad580
   labels:
     geo: uk
     test: replace

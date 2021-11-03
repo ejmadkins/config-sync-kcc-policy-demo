@@ -17,4 +17,4 @@ patches:
   patch: |-
     - op: replace
       path: /spec/googleServiceAccount
-      value: cnrmsa-prod-cluster-lon@PROJECT-INSERT.iam.gserviceaccount.com
+      value: cnrmsa-prod-cluster-lon@johnwhitaker-project-6fdad580.iam.gserviceaccount.com

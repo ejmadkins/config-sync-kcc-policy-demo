@@ -23,7 +23,7 @@ patches:
       value: tenant-b
     - op: replace
       path: /metadata/annotations/cnrm.cloud.google.com~1project-id
-      value: PROJECT-INSERT
+      value: johnwhitaker-project-6fdad580
 - target:
     kind: RepoSync
     name: repo-sync
