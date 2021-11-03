@@ -62,7 +62,7 @@ config-root
 Fork the example repository into your organization and clone the forked repo locally.  Ideally execute this from [Cloud Shell](https://cloud.google.com/shell).
 
 ```
-$ git clone https://github.com/<YOUR_ORGANIZATION>/config-sync-kcc-policy-demo.git configuration
+git clone https://github.com/<YOUR_ORGANIZATION>/config-sync-kcc-policy-demo.git configuration
 ```
 
 ### Provision GCP services
@@ -75,8 +75,8 @@ Run the `provision.sh` helper script with the `-c` flag to provision the followi
 - Create Google Service Accounts for Workload Identity
 
 ```
-$ cd scripts
-$ ./provision.sh -c
+cd scripts
+./provision.sh -c
 ```
 
 You'll be prompted to enter your GCP Project Id and your forked Git URL i.e. `https://github.com/<YOUR_ORGANIZATION>/acm-multi-repo-kustomize-sample.git`.
@@ -86,23 +86,23 @@ The provisioning should take <30 mins, once complete, there will be three GKE cl
 Once completed, render your manifests and commit the updates to your repo, this ensures your Project ID is updated in the manifests for the Config Connector to work correctly. 
 
 ```
-$ ./render.sh
-$ git commit -am 'update configuration'
-$ git push origin main
+./render.sh
+git commit -am 'update configuration'
+git push origin main
 ```
 
 ### Make changes to your Cluster's configuration
 
 After making changes i.e. adding a new tenant or resource, you should hydrate your manifests by running the `render.sh` script.
 ```
-$ ./render.sh
+./render.sh
 ```
 
 Then you can commit and push the update.
 
 ```
-$ git commit -am 'update configuration'
-$ git push origin main
+git commit -am 'update configuration'
+git push origin main
 ```
 
 ### Synchronise resources from a Tenants repository
@@ -110,7 +110,7 @@ $ git push origin main
 [Tenant A](https://github.com/ejmadkins/acm-multi-repo-tenant-a) and [Tenant B's](https://github.com/ejmadkins/acm-multi-repo-tenant-b/tree/dev) repository have already been provisioned for you with a few example resources in the dev branch.  We can verify that the various resources have been synchronised to the cluster successfully.
 
 ```
-$ kubectl get role,rolebinding,networkpolicy -n tenant-a
+kubectl get role,rolebinding,networkpolicy -n tenant-a
 ```
 
 For more advanced users, update the tenant's Kustomize file to point to your own tenant repo and sync your own resources.
@@ -120,7 +120,7 @@ For more advanced users, update the tenant's Kustomize file to point to your own
 Tenant A and B's repository includes Custom Resources for Google Cloud SQL and PubSub that the Kubernetes Config Connector will use to provision the various GCP services.  Verify that the Custom Resources have synced successfully to the cluster.
 
 ```
-$ kubectl get sqldatabases,sqlinstances,pubsubtopics -A
+kubectl get sqldatabases,sqlinstances,pubsubtopics -A
 ```
 
 Check out the Cloud SQL and PubSub section of the GCP console to verify that the services have been created.
@@ -129,7 +129,7 @@ Check out the Cloud SQL and PubSub section of the GCP console to verify that the
 
 The `policy-example` directory contains two manifests (`out-of-policy.yaml` and `in-policy.yaml`), create the following Deployment.
 ```
-$ kubectl apply -f out-of-policy.yaml
+kubectl apply -f out-of-policy.yaml
 ```
 Verify in the Workloads section of the GKE dashboard that the Pod violates a policy constraint.
 
