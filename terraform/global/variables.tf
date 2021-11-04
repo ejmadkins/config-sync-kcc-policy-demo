@@ -22,11 +22,11 @@ variable "project" {
 variable "region" {
   type        = string
   description = "the GCP region where the cluster will be created"
-  default     = "europe-west2"
+  default     = "us-central1"
 }
 
 variable "zone" {
   type        = string
   description = "the GCP zone in the region where the cluster will be created"
-  default     = "europe-west2-a"
+  default     = "us-central1-b"
 }
