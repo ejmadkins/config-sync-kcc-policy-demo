@@ -21,12 +21,22 @@ module "gke" {
   name               = var.gke_name
   region             = var.region
   zones              = [var.zone]
-  initial_node_count = 8
   network            = "gke-vpc"
   subnetwork         = "gke-vpc"
   ip_range_pods      = ""
   ip_range_services  = ""
   config_connector   = true
+  remove_default_node_pool = true
+
+  node_pools = [
+    {
+      name            = "default-node-pool"
+      machine_type    = "e2-standard-4"
+      node_locations  = var.zone
+      min_count       = 1
+      max_count       = 2
+    }
+  ]
 }
 
 module "wi" {
