@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   annotations:
-    cnrm.cloud.google.com/project-id: johnwhitaker-project-00cb323d
+    cnrm.cloud.google.com/project-id: PROJECT-INSERT
   labels:
     geo: uk
     test: replace
@@ -130,5 +130,5 @@ kind: ConfigConnector
 metadata:
   name: configconnector.core.cnrm.cloud.google.com
 spec:
-  googleServiceAccount: cnrmsa-preprod-cluster@johnwhitaker-project-00cb323d.iam.gserviceaccount.com
+  googleServiceAccount: cnrmsa-preprod-cluster@PROJECT-INSERT.iam.gserviceaccount.com
   mode: cluster
