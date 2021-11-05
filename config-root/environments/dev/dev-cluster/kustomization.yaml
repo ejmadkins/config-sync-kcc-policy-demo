@@ -19,4 +19,4 @@ patches:
   patch: |-
     - op: replace
       path: /spec/googleServiceAccount
-      value: cnrmsa-dev-cluster@johnwhitaker-project-00cb323d.iam.gserviceaccount.com
+      value: cnrmsa-dev-cluster@PROJECT-INSERT.iam.gserviceaccount.com
